@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite 1" verbose="1">
+    <test name="Project Regression 1">
+        <packages>
+            <!-- BATCH RUN : TUM TESTLERI RUN ETMEK!!! -->
+            <package name=".*"></package><!-- tüm package larda @Test annotation'i olan her methodu calistirir -->
+            <!-- tüm teslerin aynı anda calıstırılmasına batch run denir -->
+        </packages>
+    </test>
+    
+</suite>

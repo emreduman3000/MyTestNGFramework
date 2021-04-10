@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Fhc Trip" verbose="2"> <!-- configuration.properties file'ındaki browser=chrome ya da browser=firefox yazılı olan ilk calısır-->
+
+    <test name="Firefox ile test"><!-- browser chrome dan firefoxa döndü-->
+        <parameter name="browser" value="firefox"></parameter>
+        <packages>
+            <package name="com.techproed.crossBrowserTests"></package>
+        </packages>
+    </test>
+
+
+    <test name="Chrome ile test"> <!-- firefoxtan chrome a döndü-->
+        <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="com.techproed.crossBrowserTests"></package>
+        </packages>
+    </test>
+
+
+
+
+</suite>
+
+<!--
+CROSS BROWSER TEST
+xml file -> TestBaseCross -> DriverCross
+xml file:  Selenium xml file'sa parameter olup olmadigini kontrol eder.
+           Eger bir parameter varsa onu olur(parameter="browser" value="firefox")
+TestBaseCross: Eger xml'de parameter="browser" varsa TestBaseCross patameter olarak browser value kullanir. Baglantiyi @Parameters("browser") annotation'i ile saglar.
+DriverCross: Driver'i kontrol eder ve arkasindan create eder.
+browser = browser == null ? ConfigReader.getProperty("browser") : browser;
+    Eger browser null ise onu configuration.properties'den al.
+    Eger browser null degil ise browser'i xml file'den al.
+-->

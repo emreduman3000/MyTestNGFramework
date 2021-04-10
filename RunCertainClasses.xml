@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+    <suite name="Suite 2" verbose="1">
+        <test name="Login Test Suite">
+
+            <!-- sadece istedigim teslerin calismasi icin xml file kullanırız -->
+            <classes>
+                <class name="com.techproed.smoketest.FHCLoginPageNegativeTest"/>
+                <class name="com.techproed.smoketest.FHCLoginPagePositiveTest"/>
+                <class name="com.techproed.smoketest.FaceLoginPageTest"/>
+            </classes>
+
+        </test>
+    
+        <test name="test2">
+            <!-- sadece istedigim teslerin calismasi icin xml file kullanırız -->
+            <classes>
+                <class name="com.techproed.tests.TestNGAnnotations"> </class>
+            </classes>
+        </test>
+    
+    </suite>

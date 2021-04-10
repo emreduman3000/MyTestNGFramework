@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite 4" verbose="2">
+    <test name="Group 1">
+        <groups>
+            <run>
+                <!-- only, @ Test(groups = "group test1") annotation'ı olan methods ları calıstırır -->
+                <include name="group test1"/>
+                <include name="security"/>
+                <include name="database"/>
+                <include name="ui"/>
+                <include name="beforeAfterGroup"/>
+            </run>
+        </groups>
+
+        <!-- groups tagini koydugum test methodşarının classslarını yazmama gerek-->
+        <classes>
+            <class name="com.techproed.smoketest.GlbSignInPageNegativeTest"/>
+            <class name="com.techproed.smoketest.FHCLoginPageNegativeTest2"> </class><!-- linkten kaynaklanıyor -->
+            <class name="com.techproed.tests.TesNGGroupsExample"> </class><!-- linkten kaynaklanıyor -->
+            <class name="com.techproed.tests.TestNGAnnotations"> </class><!-- linkten kaynaklanıyor -->
+        </classes>
+
+    </test>
+</suite>

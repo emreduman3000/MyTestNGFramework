@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Fhc Trip" parallel="tests" thread-count="2" verbose="2"><!-- 1 yazarsak az acıklama cıkar,2-5 yazarsak daha cok acıklama cıkar-->
+    <test name="Chrome ile test">
+        <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="com.techproed.crossBrowserTests"></package>
+        </packages>
+    </test>
+
+    <test name="Firefox ile test">
+        <parameter name="browser" value="firefox"></parameter>
+        <packages>
+            <package name="com.techproed.crossBrowserTests"></package>
+        </packages>
+    </test>
+
+
+</suite>
